@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Session 8 | Assignment 4</title>
+	<style type="text/css">
+		body {
+			background-color: lightgray;
+			width: 500px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.content-area {
+			padding: 25px;
+		}
+
+		.content-area button {
+			float: right;
+		}
+
+		p#hint {
+			font-size: 12px;
+			color: #fff;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="content-area">
+		<p><a href="http://www.google.com" id="myLink">Google</a></p>
+		<p><a href="http://www.facebook.com" id="myLink1">Facebook</a></p>
+		<br>
+		<button class="btn-change">Change</button>
+		<p id="hint">Hint: Click on Change button to see the changes</p>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		function onSubmitClick() {
+			alert("Submitted Successfully");
+		}
+
+		$('document').ready(function () {
+			$('.btn-change').click(function () {
+				$('#myLink').text('w3schools');
+				$('#myLink').attr('href', 'http://www.w3schools.com');
+
+				$('#myLink1').text('AcadGild');
+				$('#myLink1').attr('href', 'http://www.acadgild.com');
+			});
+		});
+	</script>
+</body>
+</html>
